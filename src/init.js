@@ -34,5 +34,12 @@ $(document).ready(function() {
     console.log(window.dancers);
     $('.dancer').toggleClass('lineUp');
   });
+  $('.interactButton').on('click', function() {
+    window.dancers.forEach(function(dancer, index, dancers) {
+      if (index % 2 === 0) {
+        dancer.interact(dancers[index + 1]);
+      }
+    });
+  });
 });
 

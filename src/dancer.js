@@ -31,5 +31,24 @@ MakeDancer.prototype.setPosition = function(top, left) {
     transition: 'all 2s'
   };
   this.$node.css(styleSettings);
-  this.loc = [top, left];
+  this.style = styleSettings;
+};
+
+MakeDancer.prototype.interact = function(friend) {
+  var myStyle = this.style;
+  var friendStyle = friend.style;
+  var myClass = this.$node.attr('class');
+  var friendClass = friend.$node.attr('class');
+  
+  this.$node.css(friendStyle);
+  friend.$node.css(myStyle);
+  
+  friend.style = myStyle;
+  this.style = friendStyle;
+  
+  var swapClass = function() {
+    this.$node.attr('class', friendClass);
+    friend.$node.attr('class', myClass);
+  }.bind(this);
+  setTimeout(swapClass, 500);
 };
