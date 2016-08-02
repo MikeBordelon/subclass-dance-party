@@ -2,9 +2,8 @@
 var MakeDancer = function(top, left, timeBetweenSteps) {
 
  
-
-  // use jQuery to create an HTML <span> tag
   this.$node = $('<img src="media/Happy.jpg" class="dancer"></img>');
+  // use jQuery to create an HTML <span> tag
   this.timeBetweenSteps = timeBetweenSteps;
   this.step();
 
@@ -12,7 +11,6 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
   // this one sets the position to some random default point within the body
   this.setPosition(top, left);
-
 
 };
 
