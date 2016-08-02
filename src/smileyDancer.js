@@ -1,4 +1,4 @@
-var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
+var MakeSmileyDancer = function(top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
   
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -7,12 +7,11 @@ var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
   
 };
 
-MakeBlinkyDancer.prototype = Object.create(MakeDancer.prototype);
-MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;
+MakeSmileyDancer.prototype = Object.create(MakeDancer.prototype);
+MakeSmileyDancer.prototype.constructor = MakeSmileyDancer;
 
-//MakeBlinkyDancer.prototype.oldStep = MakeDancer.prototype.step.bind(this);
 
-MakeBlinkyDancer.prototype.step = function() {
+MakeSmileyDancer.prototype.step = function() {
   var oldStep = MakeDancer.prototype.step.bind(this);
   // call the old version of step at the beginning of any call to this new version of step
   //setTimeout(this.step, timeBetweenSteps);
