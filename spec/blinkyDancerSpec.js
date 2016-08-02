@@ -23,6 +23,8 @@ describe('blinkyDancer', function() {
       sinon.spy(blinkyDancer, 'step');
       expect(blinkyDancer.step.callCount).to.be.equal(0);
       blinkyDancer = new MakeBlinkyDancer(10, 20, timeBetweenSteps);
+      sinon.spy(blinkyDancer, 'step');
+      clock.tick(timeBetweenSteps);
       clock.tick(timeBetweenSteps);
 
 
