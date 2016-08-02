@@ -30,10 +30,11 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
   });
+
   $('.lineUpButton').on('click', function() {
-    console.log(window.dancers);
     $('.dancer').toggleClass('lineUp');
   });
+
   $('.interactButton').on('click', function() {
     window.dancers.forEach(function(dancer, index, dancers) {
       if (index % 2 === 0) {
