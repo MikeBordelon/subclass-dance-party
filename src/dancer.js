@@ -27,7 +27,9 @@ MakeDancer.prototype.setPosition = function(top, left) {
   //
   var styleSettings = {
     top: top,
-    left: left
+    left: left,
+    transition: 'all 2s'
   };
   this.$node.css(styleSettings);
+  this.loc = [top, left];
 };

@@ -24,3 +24,29 @@ body, a:link, a:visited, a:active{
   border-radius:50%;
   position:absolute;
 }
+.spinner{
+  animation: spin 4s linear infinite;
+}
+.bagPiper{
+  animation: bagPipe .65s linear infinite;
+}
+.heMan:hover{
+  transform: scale(.2);
+}
+.lineUp{
+  left: 0 !important;
+  transition: all 2s;
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@keyframes bagPipe {
+    from {
+    transform: rotate(0deg)
+               translate(-50px)
+               rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg)
+               translate(-50px) 
+               rotate(-360deg);
+  }
+}
